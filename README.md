@@ -25,6 +25,7 @@ Payload Created
 
 
 ```
+ ____   ___ _____   ____  ____   ___ ___ ____  
 |  _ \ / _ \_   _| |  _ \|  _ \ / _ \_ _|  _ \ 
 | | | | | | || |   | | | | |_) | | | | || | | |
 | |_| | |_| || |   | |_| |  _ <| |_| | || |_| |
@@ -37,7 +38,12 @@ Payload Created
 Choose the Option: 3
 Please Enter URL: cc-admin-stage.web.app
 IP Address: 199.36.158.100
+Organization:  None
+Registrar:  MarkMonitor Inc.
+Creation Date:  2019-01-08 22:05:04
+Expiration Date:  2022-01-08 22:05:04
+State:  CA
 Website is vulnerable!
-Are you need to generate payload(y/n): n
-Thanks For Using our script
+Are you need to generate payload(y/n): y
+PoC stored in your work directory
 ```
