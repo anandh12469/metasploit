@@ -22,3 +22,22 @@ Payload size: 10184 bytes
 
 Payload Created
 ```
+
+
+```
+|  _ \ / _ \_   _| |  _ \|  _ \ / _ \_ _|  _ \ 
+| | | | | | || |   | | | | |_) | | | | || | | |
+| |_| | |_| || |   | |_| |  _ <| |_| | || |_| |
+|____/ \___/ |_|   |____/|_| \_\\___/___|____/ 
+                                               
+
+1. Create Payload 
+2. Exploit Payload 
+3. Click Jacking Test
+Choose the Option: 3
+Please Enter URL: cc-admin-stage.web.app
+IP Address: 199.36.158.100
+Website is vulnerable!
+Are you need to generate payload(y/n): n
+Thanks For Using our script
+```
