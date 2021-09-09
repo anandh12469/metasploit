@@ -1,2 +1,22 @@
-# metasploit
-The Metasploit Framework is released under a BSD-style license. See COPYING for more details.  The latest version of this software is available from: https://metasploit.com  Bug tracking and development information can be found at: https://github.com/rapid7/metasploit-framework  New bugs and feature requests should be directed to: https://r-7.co/MSF-BUGv1  API documentation for writing modules can be found at: https://rapid7.github.io/metasploit-framework/api  Questions and suggestions can be sent to: Freenode IRC channel or e-mail the metasploit-hackers mailing list  Installing Generally, you should use the free installer, which contains all of the dependencies and will get you up and running with a few clicks. See the Dev Environment Setup if you'd like to deal with dependencies on your own.  Using Metasploit Metasploit can do all sorts of things. The first thing you'll want to do is start msfconsole, but after that, you'll probably be best served by reading Metasploit Unleashed, the great community resources, or the wiki.  Contributing See the Dev Environment Setup guide on GitHub, which will walk you through the whole process from installing all the dependencies, to cloning the repository, and finally to submitting a pull request. For slightly more information, see Contributing.
+   / \  | \ | |  _ \|  _ \ / _ \  |  _ \|  _ \ / _ \_ _|  _ \ 
+  / _ \ |  \| | | | | |_) | | | | | | | | |_) | | | | || | | |
+ / ___ \| |\  | |_| |  _ <| |_| | | |_| |  _ <| |_| | || |_| |
+/_/   \_\_| \_|____/|_| \_\\___/  |____/|_| \_\\___/___|____/ 
+                                                              
+
+1. Create Payload 
+2. Exploit Payload
+Choose the Option: 1
+1. Choose automatically 
+2. I given IP Adrress
+Choose the Option: 1
+Please enter LPORT number: 4444
+192.168.1.39
+4444
+[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+[-] No arch selected, selecting arch: dalvik from the payload
+No encoder specified, outputting raw payload
+Payload size: 10184 bytes
+
+
+Payload Created
