@@ -3,6 +3,8 @@ import os
 import socket
 from urllib.request import urlopen
 from sys import argv, exit
+import psutil
+import whois
 
 ascii_banner = pyfiglet.figlet_format("DOT DROID")
 print(ascii_banner)
@@ -25,6 +27,12 @@ def exploit():
 
 def check(url):
     print("IP Address: " + socket.gethostbyname(url))
+    w = whois.whois(url)
+    print("Organization", w.organization)
+    print("Registrar", w.registrar)
+    print("Creation Date", w.creation_date)
+    print("Expiration Date", w.expiration_date)
+    print("State", w.state)
     try:
         if "http" not in url: url = "http://" + url
         data = urlopen(url)
@@ -38,7 +46,7 @@ def create_poc(url):
    <head><title>Clickjack test page</title></head>
    <body>
      <p>Website is vulnerable to clickjacking!</p>
-     <iframe src="{}" width="500" height="500"></iframe>
+     <iframe src="http://{}" width="500" height="500"></iframe>
    </body>
 </html>
     """.format(url)
@@ -53,7 +61,42 @@ if a == 1:
     print("1. Choose automatically \n2. I given IP Adrress")
     x = int(input("Choose the Option: "))
     if x == 1:
-        c = os.popen('hostname -I | cut -d " " -f 1 | tr -d "\n"')
+        addrs = psutil.net_if_addrs()
+        count = 1
+        for key in addrs.keys():
+            if count == 1:
+                key1 = key
+                print(str(count) + ": " + key1)
+            elif count == 2:
+                key2 = key
+                print(str(count) + ": " + key2)
+            elif count == 3:
+                key3 = key
+                print(str(count) + ": " + key3)
+            elif count == 4:
+                key4 = key
+                print(str(count) + ": " + key4)
+            else:
+                print("Please enter 5 to give manually")
+            count += 1
+        interface_inp = int(input("Select your Interface: "))
+        if interface_inp == 1:
+            c = os.popen('ifdata -pa '+ key1 +' | tr -d "\n"')
+            print(c.read())
+        elif interface_inp == 2:
+            c = os.popen('ifdata -pa '+ key2 +' | tr -d "\n"')
+            print(c.read())
+        elif interface_inp == 3:
+            c = os.popen('ifdata -pa '+ key3 +' | tr -d "\n"')
+            print(c.read())
+        elif interface_inp == 4:
+            c = os.popen('ifdata -pa '+ key4 +' | tr -d "\n"')
+            print(c.read())
+        elif interface_inp == 5:
+            key5 = input("Enter your interface name: ")
+            c = os.popen('ifdata -pa '+ key5 +' | tr -d "\n"')
+            print(c.read())
+        
         d = c.read()
         e = int(input("Please enter LPORT number: "))
         create_payload(d, e)
